@@ -80,11 +80,6 @@ namespace Microsoft.Azure.Management.Network
         IApplicationSecurityGroupsOperations ApplicationSecurityGroups { get; }
 
         /// <summary>
-        /// Gets the IDdosProtectionPlansOperations.
-        /// </summary>
-        IDdosProtectionPlansOperations DdosProtectionPlans { get; }
-
-        /// <summary>
         /// Gets the IAvailableEndpointServicesOperations.
         /// </summary>
         IAvailableEndpointServicesOperations AvailableEndpointServices { get; }
@@ -113,16 +108,6 @@ namespace Microsoft.Azure.Management.Network
         /// Gets the IExpressRouteServiceProvidersOperations.
         /// </summary>
         IExpressRouteServiceProvidersOperations ExpressRouteServiceProviders { get; }
-
-        /// <summary>
-        /// Gets the IExpressRouteCrossConnectionsOperations.
-        /// </summary>
-        IExpressRouteCrossConnectionsOperations ExpressRouteCrossConnections { get; }
-
-        /// <summary>
-        /// Gets the IExpressRouteCrossConnectionPeeringsOperations.
-        /// </summary>
-        IExpressRouteCrossConnectionPeeringsOperations ExpressRouteCrossConnectionPeerings { get; }
 
         /// <summary>
         /// Gets the ILoadBalancersOperations.
