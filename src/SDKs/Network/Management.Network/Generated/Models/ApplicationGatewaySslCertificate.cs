@@ -42,6 +42,8 @@ namespace Microsoft.Azure.Management.Network.Models
         /// <param name="publicCertData">Base-64 encoded Public cert data
         /// corresponding to pfx specified in data. Only applicable in GET
         /// request.</param>
+        /// <param name="keyVaultSecretId">KeyVault Secret Url referencing a
+        /// SSL Certificate in KeyVault.</param>
         /// <param name="provisioningState">Provisioning state of the SSL
         /// certificate resource Possible values are: 'Updating', 'Deleting',
         /// and 'Failed'.</param>
@@ -51,12 +53,13 @@ namespace Microsoft.Azure.Management.Network.Models
         /// <param name="etag">A unique read-only string that changes whenever
         /// the resource is updated.</param>
         /// <param name="type">Type of the resource.</param>
-        public ApplicationGatewaySslCertificate(string id = default(string), string data = default(string), string password = default(string), string publicCertData = default(string), string provisioningState = default(string), string name = default(string), string etag = default(string), string type = default(string))
+        public ApplicationGatewaySslCertificate(string id = default(string), string data = default(string), string password = default(string), string publicCertData = default(string), string keyVaultSecretId = default(string), string provisioningState = default(string), string name = default(string), string etag = default(string), string type = default(string))
             : base(id)
         {
             Data = data;
             Password = password;
             PublicCertData = publicCertData;
+            KeyVaultSecretId = keyVaultSecretId;
             ProvisioningState = provisioningState;
             Name = name;
             Etag = etag;
@@ -89,6 +92,13 @@ namespace Microsoft.Azure.Management.Network.Models
         /// </summary>
         [JsonProperty(PropertyName = "properties.publicCertData")]
         public string PublicCertData { get; set; }
+
+        /// <summary>
+        /// Gets or sets keyVault Secret Url referencing a SSL Certificate in
+        /// KeyVault.
+        /// </summary>
+        [JsonProperty(PropertyName = "properties.keyVaultSecretId")]
+        public string KeyVaultSecretId { get; set; }
 
         /// <summary>
         /// Gets or sets provisioning state of the SSL certificate resource
